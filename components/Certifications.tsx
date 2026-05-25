@@ -9,7 +9,7 @@ const Certifications: React.FC = () => {
         {/* ✅ Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight">
-            Licenses & <span className="gradient-text">Certifications</span>
+            <span className="gradient-text">Certifications</span>
           </h2>
           <p className="mt-4 text-slate-400 text-base md:text-lg max-w-xl mx-auto">
             Professional credentials, academic specializations, and validated tech stack achievements.
