@@ -4,8 +4,8 @@ import profileImg from "./assets/profile.jpg";
 
 const Hero: React.FC = () => {
   return (
-    <section id="about" className="pt-32 pb-20 px-4 scroll-mt-20">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="pt-32 pb-20 scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-14">
 
           {/* ✅ Left Photo (Premium UI) */}
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
                 <img
                   src={profileImg}
                   alt={PERSONAL_INFO.name}
-                 className="w-64 h-72 md:w-80 md:h-80 rounded-2xl object-cover object-top shadow-lg hover:scale-[1.02] transition-transform duration-300"
+                  className="w-64 h-72 md:w-80 md:h-80 rounded-2xl object-cover object-top shadow-lg hover:scale-[1.02] transition-transform duration-300"
 
 
 
@@ -25,29 +25,41 @@ const Hero: React.FC = () => {
           </div>
 
           {/* ✅ Right Content */}
-          <div className="flex-1 text-center md:text-right">
+          <div className="flex-1 text-center md:text-left">
 
-            <div className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-sky-400 uppercase bg-sky-400/10 rounded-full border border-sky-400/20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-wider text-emerald-400 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/20">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
               Available for Opportunities
             </div>
 
-            {/* ✅ Heading Right */}
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 md:text-right">
+            {/* ✅ Heading Left */}
+            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 md:text-left tracking-tight">
               Hi, I'm <span className="gradient-text">{PERSONAL_INFO.name}</span>
             </h1>
 
             {/* ✅ Text + Buttons Down (mt-10) */}
             <div className="mt-10">
               {/* ✅ Paragraph Left Start */}
-              <p className="text-xl md:text-2xl text-slate-400 mb-8 max-w-2xl leading-relaxed text-left ml-auto">
-                A passionate{" "}
-                <span className="text-white font-semibold">{PERSONAL_INFO.title}</span>{" "}
-                specializing in building robust web applications and solving complex
-                algorithmic challenges.
+              <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-3xl leading-relaxed text-left md:text-left mr-auto ml-0">
+                I am a <span className="text-white font-semibold">{PERSONAL_INFO.title}</span> who builds scalable full-stack web applications and AI-driven platforms. With a strong foundation in complex algorithmic problem-solving, I specialize in crafting clean backend architectures and pixel-perfect, responsive user interfaces.
               </p>
 
               {/* ✅ Buttons Down */}
-              <div className="flex flex-wrap justify-center md:justify-center md:pl-24 gap-4">
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                {PERSONAL_INFO.resume && (
+                  <a
+                    href={PERSONAL_INFO.resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-6 py-3 bg-sky-500 hover:bg-sky-600 text-white rounded-xl transition-all shadow-lg shadow-sky-500/20 active:scale-95 font-bold"
+                  >
+                    <i className="fa-solid fa-file-arrow-down text-white"></i> Resume
+                  </a>
+                )}
+
                 <a
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"

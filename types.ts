@@ -24,3 +24,21 @@ export interface Achievement {
   title: string;
   description: string;
 }
+
+export interface WorkExperience {
+  company: string;
+  role: string;
+  location: string;
+  duration: string;
+  points: string[];
+  technologies?: string[];
+}
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  date: string;
+  credentialId?: string;
+  credentialUrl?: string;
+  icon?: string;
+}
