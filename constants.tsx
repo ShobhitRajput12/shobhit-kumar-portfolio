@@ -58,7 +58,7 @@ export const EXPERIENCE: WorkExperience[] = [
     company: "Ostera AI",
     role: "Full Stack Developer-Intern",
     location: "Bengaluru, Karnataka",
-    duration: "Mar 2026 – Present",
+    duration: "Mar 2026 – May 2026",
     points: [
       "Developed scalable full-stack web applications using React.js, Node.js, Express, and MongoDB",
       "Built secure REST APIs with JWT authentication and role-based access control",
